@@ -1,31 +1,40 @@
 function EventCard({ event }) {
   return (
-    <>
-      <div className="rounded-2xl overflow-hidden bg-white pt-24 pl-10 pr-10">
-        {/* IMAGE SECTION */}
-        <div className="relative rounded-2xl overflow-hidden">
-          <img className="w-full" src={event.image} alt="event image" />
+    <div className="rounded-2xl overflow-hidden bg-white">
 
-          {/* Info SECTION */}
-          <div className="absolute bottom-4 left-4  font-bold bg-white80 p-4 rounded-xl">
-            <h2>{event.location}</h2>
+      {/* IMAGE SECTION */}
+      <div className="relative">
+        <img
+          className="w-full"
+          src={event.image}
+          alt="event"
+        />
 
-            <div className="flex justify-between items-center">
-              <div className="mt-2">
-                <h2>DATE</h2>
-                <p>{event.date}</p>
-              </div>
+        {/* ONLY title + price on image */}
+        <div className="flex justify-between items-center gap-4 absolute top-4 left-4 right-4 text-white">
+          <h2 className=" bg-blue-600 font-bold p-1.5 rounded-lg">{event.title}</h2>
+          <p className=" bg-blue-600 font-bold p-1.5 rounded-lg">{event.price}</p>
+        </div>
+      </div>
 
-              <div className="mt-2">
-                <h2>Time</h2>
-                <p>{event.time}</p>
-              </div>
-            </div>
+      {/* INFO SECTION BELOW IMAGE */}
+      <div className="p-4 bg-gray-300">
+        <h2 className="font-bold">{event.location}</h2>
+
+        <div className="flex justify-between mt-4">
+          <div>
+            <h3 className="font-semibold text-white">DATE</h3>
+            <p>{event.date}</p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-white">TIME</h3>
+            <p>{event.time}</p>
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default EventCard;
+export default EventCard
