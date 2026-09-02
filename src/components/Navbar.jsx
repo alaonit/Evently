@@ -1,6 +1,6 @@
 
 
-function Navbar() {
+function Navbar({user}) {
 
   return (
     <nav className="bg-amber-100 fixed p-5 z-50 top-0 w-full">
@@ -9,7 +9,7 @@ function Navbar() {
 
         <div>
           <ul className="flex gap-3">
-            <li><a href="#">Trending</a></li>
+            <li><a href="#">Trending</a></li> 
             <li><a href="#">Events</a></li>
             <li><a href="#">More</a></li>
           </ul>
@@ -17,7 +17,7 @@ function Navbar() {
 
         <div className="flex items-center gap-2">
           <img className="h-6 w-6 rounded-full" src="./public/profile.jpeg" alt="profile" />
-          <p>Hi,Alhagie</p>
+          <p>Hi,{user}</p>
         </div>
         
       </div>
