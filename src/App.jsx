@@ -26,7 +26,7 @@ function App() {
     location: "Kololi, The Gambia",
     date: "18 September 2026",
     time: "6 PM - 10 PM",
-    image: "/concert2.webp"
+    image: "/concert2.jpg"
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ function App() {
     location: "Senegambia, The Gambia",
     date: "25 September 2026",
     time: "9 PM - 2 AM",
-    image: "/concert3.webp"
+    image: "/concert3.jpg"
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ function App() {
     location: "Cape Point, The Gambia",
     date: "3 October 2026",
     time: "5 PM - 11 PM",
-    image: "/concert4.webp"
+    image: "/concert4.jpg"
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ function App() {
     location: "Bakau, The Gambia",
     date: "12 October 2026",
     time: "8 PM - 1 AM",
-    image: "/concert5.webp"
+    image: "/concert5.jpg"
   },
   {
     id: 6,
@@ -70,7 +70,9 @@ function App() {
       <Navbar user = {username.name}/>
       <main className="bg-">
         <Hero>
-          <EventCard event={event}/>
+          {events.map((event)=>{
+            return <EventCard key={event.id} event={event}/>
+          })}
         </Hero>
       </main>
     </>

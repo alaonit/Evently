@@ -5,7 +5,7 @@ function EventCard({ event }) {
       {/* IMAGE SECTION */}
       <div className="relative">
         <img
-          className="w-full"
+          className="w-full h-64 object-cover"
           src={event.image}
           alt="event"
         />
