@@ -10,11 +10,14 @@ function App() {
     name: "Alhagie",
   })
 
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
   const events = [
   {
     id: 1,
     title: "Afro Music Festival",
     price: "D500",
+    category: "Festival",
     location: "Banjul, The Gambia",
     date: "10 September 2026",
     time: "8 PM - 11 PM",
@@ -23,6 +26,7 @@ function App() {
   {
     id: 2,
     title: "Sunset Beach Live",
+    category: "Festival",
     price: "D350",
     location: "Kololi, The Gambia",
     date: "18 September 2026",
@@ -32,6 +36,7 @@ function App() {
   {
     id: 3,
     title: "Afrobeats Night",
+    category: "Festival",
     price: "D600",
     location: "Senegambia, The Gambia",
     date: "25 September 2026",
@@ -41,6 +46,7 @@ function App() {
   {
     id: 4,
     title: "Coastal Vibes Festival",
+    category: "Festival",
     price: "D450",
     location: "Cape Point, The Gambia",
     date: "3 October 2026",
@@ -50,6 +56,7 @@ function App() {
   {
     id: 5,
     title: "Urban Sound Experience",
+    category: "Festival",
     price: "D750",
     location: "Bakau, The Gambia",
     date: "12 October 2026",
@@ -59,6 +66,7 @@ function App() {
   {
     id: 6,
     title: "Gambia Music Fest",
+    category: "Festival",
     price: "D1000",
     location: "Bijilo, The Gambia",
     date: "24 October 2026",
@@ -66,13 +74,23 @@ function App() {
     image: "/concert6.webp"
   }
 ]
+
+  const filtered = events.filter((event)=>{
+      if(selectedCategory === "All"){
+      return event
+    }else{
+      return event.category === selectedCategory
+    }
+    
+  })
+
   return (
     <>
       <Navbar user = {username.name}/>
       <main className="bg-cover bg-no-repeat bg-center min-h-screen" style={{background: "url('bg-image.png')"}}>
         <Hero/> 
-        <Event>
-          {events.map((event)=>{
+        <Event filtered={filtered}>
+          {filtered.map((event)=>{
             return <EventCard key={event.id} event={event}/>
           })}
         </Event>

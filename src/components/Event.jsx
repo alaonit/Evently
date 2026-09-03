@@ -1,4 +1,4 @@
-function Event({children}) {
+function Event({children,filtered}) {
   return (
     <section className="px-5 py-16">
       <div className="mb-8">
