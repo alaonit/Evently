@@ -2,10 +2,14 @@ function EventCard({ event }) {
   return (
     <div className="rounded-2xl overflow-hidden bg-white">
 
+      {/* TITLE SECTION */}
+
+      
+
       {/* IMAGE SECTION */}
       <div className="relative">
         <img
-          className="w-full h-64 object-cover"
+          className="w-full h-64 object-covernpm "
           src={event.image}
           alt="event"
         />

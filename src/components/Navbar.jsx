@@ -3,12 +3,12 @@
 function Navbar({user}) {
 
   return (
-    <nav className="bg-amber-100 fixed p-5 z-50 top-0 w-full">
+    <nav className="bg-white fixed p-5 z-50 top-0 w-full">
       <div className="flex justify-between items-center">
-        <h1 className="font-bold">Reserved</h1>
+        <h1 className="font-bold text-purple-600 text-2xl">Reserved</h1>
 
         <div>
-          <ul className="flex gap-3">
+          <ul className="flex gap-3 font-bold">
             <li><a href="#">Trending</a></li> 
             <li><a href="#">Events</a></li>
             <li><a href="#">More</a></li>

@@ -68,7 +68,7 @@ function App() {
   return (
     <>
       <Navbar user = {username.name}/>
-      <main className="bg-">
+      <main>
         <Hero>
           {events.map((event)=>{
             return <EventCard key={event.id} event={event}/>
