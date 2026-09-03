@@ -1,7 +1,6 @@
 
-import EventCard from "./EventCard"
 
-function Hero({children}) {
+function Hero() {
  
   return (
     <section className="pt-24 px-10">
@@ -18,18 +17,14 @@ function Hero({children}) {
               <p className="text-purple-600 mb-2 font-bold">Gambian Festivals 2026</p>
               <span className="block text-6xl font-bold tracking-wide">EVERY EVENT IN </span>
               <span className="text-purple-700 block text-6xl font-bold tracking-wide">ONE PLACE</span>
-              <button className="bg-purple-600 border-none rounded-full p-3 text-white font-bold mt-3">Book Event</button>
+              <button className="bg-purple-600 border-none rounded-full p-3 text-white font-bold mt-3 cursor-pointer">Book Event</button>
             </span>
 
-            <div className="mt-3 bg-amber-300 rounded-md">
-              <p className="p-2 font-bold text-white">Up for some fun this summer?</p>
+            <div className="mt-3 rounded-md">
+              <p className="p-10 font-bold text-white bg-gray-400 rounded-md">Up for some fun this summer?</p>
             </div>
           </div>          
         </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {children}
       </div>
     </section>
   )

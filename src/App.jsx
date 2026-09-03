@@ -2,6 +2,7 @@ import { useState } from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import EventCard from "./components/EventCard"
+import Event from "./components/Event"
 
 function App() {
 
@@ -69,11 +70,12 @@ function App() {
     <>
       <Navbar user = {username.name}/>
       <main className="bg-cover bg-no-repeat bg-center min-h-screen" style={{background: "url('bg-image.png')"}}>
-        <Hero>
+        <Hero/> 
+        <Event>
           {events.map((event)=>{
             return <EventCard key={event.id} event={event}/>
           })}
-        </Hero>
+        </Event>
       </main>
     </>
   )
