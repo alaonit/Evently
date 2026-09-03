@@ -8,10 +8,10 @@ function Navbar({user}) {
         <h1 className="font-bold text-purple-600 text-2xl">Reserved</h1>
 
         <div>
-          <ul className="flex gap-3 font-bold">
-            <li><a href="#">Trending</a></li> 
-            <li><a href="#">Events</a></li>
-            <li><a href="#">More</a></li>
+          <ul className="flex gap-3 font-bold ">
+            <li><a className="border-b-2 border-purple-600" href="#">Trending</a></li> 
+            <li><a className="border-b-2 border-purple-600" href="#">Events</a></li>
+            <li><a className="border-b-2 border-purple-600 " href="#">More</a></li>
           </ul>
         </div>
 
