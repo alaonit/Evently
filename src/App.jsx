@@ -68,7 +68,7 @@ function App() {
   return (
     <>
       <Navbar user = {username.name}/>
-      <main>
+      <main className="bg-cover bg-no-repeat bg-center min-h-screen" style={{background: "url('bg-image.png')"}}>
         <Hero>
           {events.map((event)=>{
             return <EventCard key={event.id} event={event}/>
