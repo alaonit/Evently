@@ -1,4 +1,4 @@
-function Event({children,filtered}) {
+function Event({ children, setSelectedCategory, selectedCategory }) {
   return (
     <section className="px-5 py-16">
       <div className="mb-8">
@@ -15,19 +15,47 @@ function Event({children,filtered}) {
       </div>
 
       <div className="flex flex-wrap gap-3 mb-8">
-        <button className="bg-purple-600 text-white px-5 py-2 rounded-full">
+        <button
+          onClick={() => setSelectedCategory("All")}
+          className={
+            selectedCategory === "All"
+              ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
+              : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
+          }
+        >
           All
         </button>
 
-        <button className="bg-white px-5 py-2 rounded-full border">
+        <button
+          onClick={() => setSelectedCategory("Concert")}
+          className={
+            selectedCategory === "Concerts"
+              ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
+              : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
+          }
+        >
           Concerts
         </button>
 
-        <button className="bg-white px-5 py-2 rounded-full border">
+        <button
+          onClick={() => setSelectedCategory("Festival")}
+          className={
+            selectedCategory === "Festivals"
+              ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
+              : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
+          }
+        >
           Festivals
         </button>
 
-        <button className="bg-white px-5 py-2 rounded-full border">
+        <button
+          onClick={() => setSelectedCategory("Sport")}
+          className={
+            selectedCategory === "Sports"
+              ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
+              : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
+          }
+        >
           Sports
         </button>
       </div>

@@ -12,6 +12,8 @@ function App() {
 
   const [selectedCategory, setSelectedCategory] = useState("All")
 
+  const [selectedSection,setSelectedSection] = useState("Trending")
+
   const events = [
   {
     id: 1,
@@ -86,10 +88,10 @@ function App() {
 
   return (
     <>
-      <Navbar user = {username.name}/>
+      <Navbar setSelectedSection={setSelectedSection} selectedSection={selectedSection} user = {username.name}/>
       <main className="bg-cover bg-no-repeat bg-center min-h-screen" style={{background: "url('bg-image.png')"}}>
         <Hero/> 
-        <Event filtered={filtered}>
+        <Event selectedCatergory={selectedCategory} setSelectedCategory={setSelectedCategory}>
           {filtered.map((event)=>{
             return <EventCard key={event.id} event={event}/>
           })}
