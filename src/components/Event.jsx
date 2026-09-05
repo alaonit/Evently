@@ -29,34 +29,34 @@ function Event({ children, setSelectedCategory, selectedCategory }) {
         <button
           onClick={() => setSelectedCategory("Concert")}
           className={
-            selectedCategory === "Concerts"
+            selectedCategory === "Concert"
               ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
               : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
           }
         >
-          Concerts
+          Concert
         </button>
 
         <button
           onClick={() => setSelectedCategory("Festival")}
           className={
-            selectedCategory === "Festivals"
+            selectedCategory === "Festival"
               ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
               : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
           }
         >
-          Festivals
+          Festival
         </button>
 
         <button
           onClick={() => setSelectedCategory("Sport")}
           className={
-            selectedCategory === "Sports"
+            selectedCategory === "Sport"
               ? "bg-purple-600 text-white px-5 py-2 rounded-full cursor-pointer"
               : "bg-white text-gray-700 px-5 py-2 rounded-full cursor-pointer"
           }
         >
-          Sports
+          Sport
         </button>
       </div>
 
