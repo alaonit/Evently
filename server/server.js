@@ -7,21 +7,30 @@ const server = createServer((req,res)=>{
   res.setHeader("Access-Control-Allow-Origin", "*")
   if(req.url === '/api/events' && req.method === 'GET'){
     res.setHeader('Content-Type','application/json');
+    res.statusCode= 200
     res.end(JSON.stringify(events))
-  }else{
-    res.statusCode = 404
-    res.end("Not found")
-  }
 
-  if(req.url === `/api/events/` && req.method === 'GET'){
+  }else if(req.url.startsWith('/api/events/') && req.method === 'GET'){
+    const id = Number(req.url.split("/").pop())
 
-    const id = Number(req.url.split("/").pop ())
-
-    const filteredId = events.filter((event)=>{
+    const filteredId = events.find((event)=>{
       return id === event.id;
     })
+   
+    if(filteredId){
+      res.setHeader("Content-Type","application/json");
+      res.statusCode= 200
+      res.end(JSON.stringify(filteredId))
+    }else{
+      res.setHeader("Content-Type","application/json");
+      res.statusCode= 404
+      res.end(JSON.stringify({message:"Event not found"}))
+    }
+
+  }else{
+    res.statusCode = 404
     res.setHeader('Content-Type','application/json');
-    res.end(JSON.stringify(filteredId))
+    res.end(JSON.stringify({message:"Route not found"}))
   }
 })
 
