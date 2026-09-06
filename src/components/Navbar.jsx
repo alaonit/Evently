@@ -29,7 +29,7 @@ function Navbar({ user, selectedSection, setSelectedSection }) {
                     ? "cursor-pointer border-b-2 border-b-purple-600"
                     : "text-gray-700 cursor-pointer"
                 }
-                href="#"
+                href="#events"
               >
                 Events
               </a>

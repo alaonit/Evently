@@ -27,12 +27,12 @@ function EventCard({ event }) {
 
         <div className="flex justify-between mt-4">
           <div>
-            <h3 className="font-semibold text-white">DATE</h3>
+            <h3 className="font-semibold text-purple-600">DATE</h3>
             <p>{event.date}</p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white">TIME</h3>
+            <h3 className="font-semibold text-purple-600">TIME</h3>
             <p>{event.time}</p>
           </div>
         </div>

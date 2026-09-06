@@ -11,7 +11,7 @@ export const events= [
     },
     {
       id: 2,
-      title: "Sunset Beach Live",
+      title: "Sunset Beach Live", 
       category: "Festival",
       price: "D350",
       location: "Kololi, The Gambia",

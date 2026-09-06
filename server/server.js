@@ -1,35 +1,20 @@
-import http, { createServer } from "http"
-import {events} from "../data/data.js"
+import { createServer } from "node:http"
+import {handleGet,handleGetEventById} from "./handlers/eventHandlers.js"
 
 
 const PORT = 8000;
 const server = createServer((req,res)=>{
   res.setHeader("Access-Control-Allow-Origin", "*")
+  res.setHeader('Content-Type','application/json');
+
   if(req.url === '/api/events' && req.method === 'GET'){
-    res.setHeader('Content-Type','application/json');
-    res.statusCode= 200
-    res.end(JSON.stringify(events))
+    handleGet(res)
 
   }else if(req.url.startsWith('/api/events/') && req.method === 'GET'){
-    const id = Number(req.url.split("/").pop())
-
-    const filteredId = events.find((event)=>{
-      return id === event.id;
-    })
-   
-    if(filteredId){
-      res.setHeader("Content-Type","application/json");
-      res.statusCode= 200
-      res.end(JSON.stringify(filteredId))
-    }else{
-      res.setHeader("Content-Type","application/json");
-      res.statusCode= 404
-      res.end(JSON.stringify({message:"Event not found"}))
-    }
-
+    handleGetEventById(req,res)
+    
   }else{
     res.statusCode = 404
-    res.setHeader('Content-Type','application/json');
     res.end(JSON.stringify({message:"Route not found"}))
   }
 })

@@ -1,6 +1,6 @@
 function Event({ children, setSelectedCategory, selectedCategory }) {
   return (
-    <section className="px-5 py-16">
+    <section id="events" className="px-5 py-16">
       <div className="mb-8">
         <p className="text-purple-600 font-bold tracking-widest text-sm">
           DISCOVER EVENTS
