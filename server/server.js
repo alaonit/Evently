@@ -13,7 +13,11 @@ const server = createServer((req,res)=>{
   }else if(req.url.startsWith('/api/events/') && req.method === 'GET'){
     handleGetEventById(req,res)
     
-  }else{
+  }else if(req.url === '/api/events' && req.method === 'POST'){
+
+  }
+  
+  else{
     res.statusCode = 404
     res.end(JSON.stringify({message:"Route not found"}))
   }

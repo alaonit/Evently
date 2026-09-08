@@ -1,9 +1,11 @@
 import { events } from "../../data/data.js";
+import fs from "fs/promises"
 
 export function handleGet(res){
   res.statusCode= 200
   res.end(JSON.stringify(events))
 }
+
 
 
 
