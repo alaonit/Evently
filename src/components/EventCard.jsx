@@ -23,17 +23,17 @@ function EventCard({ event }) {
 
       {/* INFO SECTION BELOW IMAGE */}
       <div className="p-4 bg-gray-300">
-        <h2 className="font-bold">{event.location}</h2>
+        <h2 className="font-bold text-blue-600">{event.location}</h2>
 
         <div className="flex justify-between mt-4">
           <div>
-            <h3 className="font-semibold text-purple-600">DATE</h3>
-            <p>{event.date}</p>
+            <h3 className="font-semibold text-blue-600">DATE</h3>
+            <p className="text-blue-600">{event.date}</p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-purple-600">TIME</h3>
-            <p>{event.time}</p>
+            <h3 className="font-semibold text-blue-600">TIME</h3>
+            <p className="text-blue-600">{event.time}</p>
           </div>
         </div>
       </div>

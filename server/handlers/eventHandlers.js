@@ -8,7 +8,6 @@ export function handleGet(res){
 
 
 
-
 export function handleGetEventById(req,res) {
   const id = Number(req.url.split("/").pop())
 

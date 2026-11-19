@@ -12,7 +12,7 @@ function Hero() {
           </div>
           
 
-          <div className="text-start mt-3 ml-15">
+          <div className="text-start mt-5 ml-15">
             <span>
               <p className="text-purple-600 mb-2 font-bold">Gambian Festivals 2026</p>
               <span className="block text-6xl font-bold tracking-wide">EVERY EVENT IN </span>
